@@ -13,3 +13,61 @@ body {
     font-family: 'Overpass', Arial, Helvetica, sans-serif;
     margin: 50px;
 }
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-areas: 
+    'hero hero features-1'
+    'hero hero features-2';
+}
+
+.hero {
+    grid-area: hero;
+    min-height: 300px;
+    padding: 50px;
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.features {
+    color: white;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.features-1 {
+    grid-area: features-1;
+    background-image: url(img/hrv-1.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.features-2 {
+    grid-area: features-2;
+    background-image: url(img/hrv-2.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.features .price {
+    font-size: 3em;
+    /* font-weight: 200; */
+}
+
+@media screen and (max-width: 600px){
+    .hero > * {
+        display: none;
+    }
+
+    .features > * {
+        display: none;
+    }
+
+    .features > * {
+        display: none;
+    }
+}
