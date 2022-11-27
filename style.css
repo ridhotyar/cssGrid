@@ -11,7 +11,8 @@ body {
     background-color: #ddd;
     font-size: 18px;
     font-family: 'Overpass', Arial, Helvetica, sans-serif;
-    margin: 50px;
+    padding: 50px;
+    margin: 0px auto;
 }
 
 .container {
@@ -100,6 +101,33 @@ body {
     font-size: 0.9em;
 }
 
+/* Services */
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    gap: 10px;
+}
+
+.service {
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: white;
+}
+
+.service .icon {
+    font-size: 3em;
+}
+
+.service h3 {
+    font-size: 1.5em;
+}
+
+.service p {
+    font-weight: 50;
+    font-size: 0.6em;
+}
+
 /* Responsive break point */
 @media screen and (max-width: 1024px){
     .menu {
@@ -130,5 +158,18 @@ body {
 @media screen and (max-width: 768px){
 }
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 500px){
+    .header {
+        grid-template-areas: 
+        'hero'
+        'features-1'
+        'features-2';
+    }
+
+    .menu ul {
+        list-style: none;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 5px;
+    }
 }
